@@ -1,8 +1,11 @@
 lda.egg-info/
 UNKNOWN.egg-info/
 easyTopicClustering.egg-info/
-.idea/
 resources/.DS_Store
+build/
+dist/
+nLargestDocSummary.egg-info/
+.idea/
 *.md
 *.html
 *.json

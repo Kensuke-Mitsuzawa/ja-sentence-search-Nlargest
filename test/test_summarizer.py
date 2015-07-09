@@ -3,9 +3,9 @@ __author__ = 'kensuke-mi'
 
 
 import unittest
-from  src.frequency_summarizer import FrequencySummarizer
-from src.mecab_wrapper.mecab_wrapper import MecabWrapper
-from src.parsers.parser import Parser
+from  nLargestDocSummary.frequency_summarizer import FrequencySummarizer
+from nLargestDocSummary.mecab_wrapper.mecab_wrapper import MecabWrapper
+from nLargestDocSummary.parsers.parser import Parser
 
 class TestSummarizer(unittest.TestCase):
 

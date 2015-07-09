@@ -2,11 +2,11 @@
 __author__ = 'kensuke-mi'
 
 import unittest
-from src.parsers.parser import Parser
-from src.mecab_wrapper.mecab_wrapper import MecabWrapper
-from src.models.document_object_model import DocumentModel
-from src.models.sentence_model import Sentence
-from src.models.paragraph_model import Paragraph
+from nLargestDocSummary.parsers.parser import Parser
+from nLargestDocSummary.mecab_wrapper.mecab_wrapper import MecabWrapper
+from nLargestDocSummary.models.document_object_model import DocumentModel
+from nLargestDocSummary.models.sentence_model import Sentence
+from nLargestDocSummary.models.paragraph_model import Paragraph
 
 class TestParser(unittest.TestCase):
 
