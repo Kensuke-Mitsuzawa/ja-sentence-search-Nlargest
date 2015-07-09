@@ -1,0 +1,16 @@
+lda.egg-info/
+UNKNOWN.egg-info/
+easyTopicClustering.egg-info/
+.idea/
+resources/.DS_Store
+*.md
+*.html
+*.json
+*.csv
+*.xlsx
+*.xls
+*.png
+*.dist
+*.index
+*.pyc
+.DS_Store
