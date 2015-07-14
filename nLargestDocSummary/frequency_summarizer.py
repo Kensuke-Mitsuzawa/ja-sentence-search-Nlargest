@@ -1,12 +1,13 @@
 #! -*- coding: utf-8 -*-
 __author__ = 'kensuke-mi'
 
-
 from nltk.corpus import stopwords
 from collections import defaultdict
 from string import punctuation
 from heapq import nlargest
 from models.document_object_model import DocumentModel
+import logging
+logging.basicConfig(level=logging.INFO)
 
 class FrequencySummarizer:
 
@@ -64,16 +65,21 @@ class FrequencySummarizer:
         paragraphs = self._document._paragraphs
         for parapgraph in paragraphs:
             sents = parapgraph._sentences
-            assert n <= len(sents)
-            word_sent = [s._tokens for s in sents]
-            self._freq = self._compute_frequencies(word_sent)
-            ranking = defaultdict(int)
-            for i,sent in enumerate(word_sent):
-              for w in sent:
-                if w in self._freq:
-                  ranking[i] += self._freq[w]
-            sents_idx = self._rank(ranking, n)
-            best_sentences = [sents[j]._text for j in sents_idx]
+            #assert n <= len(sents)
+            if n > len(sents):
+                best_sentences = [s._text for s in sents]
+                logging.warning(msg = "n parameter is bigger than sentences. All sentences are put in")
+            else:
+                word_sent = [s._tokens for s in sents]
+                self._freq = self._compute_frequencies(word_sent)
+                ranking = defaultdict(int)
+                for i,sent in enumerate(word_sent):
+                  for w in sent:
+                    if w in self._freq:
+                      ranking[i] += self._freq[w]
+                sents_idx = self._rank(ranking, n)
+                best_sentences = [sents[j]._text for j in sents_idx]
+            
             best_sentences_garagraph.append(best_sentences)
 
         return best_sentences_garagraph
