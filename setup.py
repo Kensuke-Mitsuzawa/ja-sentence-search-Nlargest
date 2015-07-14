@@ -28,7 +28,7 @@ setup(
     name = 'nLargestDocSummary',
     test_suite = 'test_all.suite',
     install_requires = install_require,
-    version = 0.1,
+    version = 0.2,
     packages = [
         "nLargestDocSummary",
         "nLargestDocSummary.mecab_wrapper",
