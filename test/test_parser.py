@@ -7,6 +7,7 @@ from nLargestDocSummary.mecab_wrapper.mecab_wrapper import MecabWrapper
 from nLargestDocSummary.models.document_object_model import DocumentModel
 from nLargestDocSummary.models.sentence_model import Sentence
 from nLargestDocSummary.models.paragraph_model import Paragraph
+from six import string_types
 
 class TestParser(unittest.TestCase):
 
@@ -42,7 +43,7 @@ class TestParser(unittest.TestCase):
             for sentence_obj in paragraph_obj._sentences:
                 assert isinstance(sentence_obj, Sentence)
                 for tokens in sentence_obj._tokens:
-                    for token in tokens: assert isinstance(token, unicode)
+                    for token in tokens: assert isinstance(token, string_types)
 
 
 def suite():

@@ -182,10 +182,10 @@ def __example():
     without_freature_res = mecab_wrapper.tokenize(sentence, is_feature=False, is_surface=False)
 
     for token_tuple in with_freature_res:
-        print u'{}_{}'.format(token_tuple[0], u'_'.join(token_tuple[1]))
+        print(u'{}_{}'.format(token_tuple[0], u'_'.join(token_tuple[1])))
 
     for surface in without_freature_res:
-        print surface
+        print(surface)
 
 if __name__ == "__main__":
     __example()

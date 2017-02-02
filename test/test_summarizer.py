@@ -10,7 +10,7 @@ from nLargestDocSummary.parsers.parser import Parser
 class TestSummarizer(unittest.TestCase):
 
     def setUp(self):
-        print ''
+        pass
 
 
     def test_japanese_summarizer_more_than_actual_sents(self):
@@ -42,8 +42,8 @@ class TestSummarizer(unittest.TestCase):
         summarized = fs.summarize(n=n_sentence)
         for summarized_sent in summarized:
             for s in summarized_sent:
-                print s
-            print u'-'*30
+                print(s)
+            print(u'-'*30)
     
     def test_japanese_summarizer(self):
         # input example
@@ -75,8 +75,8 @@ class TestSummarizer(unittest.TestCase):
         for summarized_sent in summarized:
             assert len(summarized_sent) == n_sentence
             for s in summarized_sent:
-                print s
-            print u'-'*30
+                print(s)
+            print(u'-'*30)
 
 
 
