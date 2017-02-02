@@ -1,11 +1,10 @@
 #! -*- coding: utf-8 -*-
 __author__ = 'kensuke-mi'
 
-from nltk.corpus import stopwords
 from collections import defaultdict
 from string import punctuation
 from heapq import nlargest
-from models.document_object_model import DocumentModel
+from nLargestDocSummary.models.document_object_model import DocumentModel
 import logging
 logging.basicConfig(level=logging.INFO)
 
@@ -27,6 +26,7 @@ class FrequencySummarizer:
         self._document = documentObj
 
         if language=='en':
+            raise NotImplemented
             self._stopwords = set(stopwords.words('english') + list(punctuation))
         elif language=='ja':
             # TODO stopword機能の実装
@@ -48,10 +48,13 @@ class FrequencySummarizer:
               freq[word] += 1
         # frequencies normalization and fitering
         m = float(max(freq.values()))
+        freq_count_dict = {}
         for w in freq.keys():
-          freq[w] = freq[w]/m
-          if freq[w] >= self._max_cut or freq[w] <= self._min_cut:
-            del freq[w]
+            freq_count_dict[w] = freq[w]/m
+            #freq[w] = freq[w]/m
+            if freq[w] >= self._max_cut or freq[w] <= self._min_cut:
+                pass
+                #del freq[w]
         return freq
 
 

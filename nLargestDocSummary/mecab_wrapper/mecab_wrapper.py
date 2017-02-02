@@ -5,9 +5,13 @@ import sys
 import MeCab
 import logging
 import subprocess
+from JapaneseTokenizer import MecabWrapper
 logging.basicConfig(level=logging.DEBUG,
                     format="%(asctime)s %(levelname)s %(message)s")
 
+
+
+'''
 class MecabWrapper:
 
     def __init__(self, dictType, osType, pathNeologd='', pathUserDictCsv=''):
@@ -188,4 +192,6 @@ def __example():
         print(surface)
 
 if __name__ == "__main__":
-    __example()
+    __example()'''
+
+

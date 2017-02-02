@@ -1,8 +1,8 @@
 #! -*- coding: utf-8 -*-
 __author__ = 'kensuke-mi'
 
-from .sentence_model import Sentence
-from .paragraph_model import Paragraph
+from nLargestDocSummary.models.sentence_model import Sentence
+from nLargestDocSummary.models.paragraph_model import Paragraph
 import itertools
 
 class DocumentModel(object):

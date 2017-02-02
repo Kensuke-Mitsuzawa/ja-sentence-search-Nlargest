@@ -5,9 +5,9 @@ __author__ = 'kensuke-mi'
 # 段落区切り記号
 # mecabParser
 
-from ..models.document_object_model import DocumentModel
-from ..models.sentence_model import Sentence
-from ..models.paragraph_model import Paragraph
+from nLargestDocSummary.models.document_object_model import DocumentModel
+from nLargestDocSummary.models.sentence_model import Sentence
+from nLargestDocSummary.models.paragraph_model import Paragraph
 
 class Parser(object):
 

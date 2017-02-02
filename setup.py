@@ -10,9 +10,9 @@ sys.path.append('./test')
 python_version = sys.version_info
 
 if python_version >= (3, 0, 0):
-    install_requires = ['mecab-python3', 'nltk==3.0.1', 'six']
+    install_requires = ['mecab-python3', 'nltk==3.0.1', 'six', 'JapaneseTokenizer']
 else:
-    install_requires = ['mecab-python', 'nltk==3.0.1', 'six']
+    install_requires = ['mecab-python', 'nltk==3.0.1', 'six', 'JapaneseTokenizer']
 
 try:
     import MeCab
@@ -48,4 +48,6 @@ setup(
         "nLargestDocSummary.parsers",
         "test"
     ],
+    include_package_data=True,
+    zip_safe=False
 )

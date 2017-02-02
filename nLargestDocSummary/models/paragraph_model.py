@@ -1,7 +1,7 @@
 #! -*- coding: utf-8 -*-
 __author__ = 'kensuke-mi'
 
-from .sentence_model import Sentence
+from nLargestDocSummary.models.sentence_model import Sentence
 import itertools
 
 class Paragraph(object):

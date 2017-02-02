@@ -11,7 +11,7 @@ class Sentence(object):
         self._tokens = self.words()
 
     def words(self):
-        return self._MecabTokenizer.tokenize(self._text)
+        return self._MecabTokenizer.tokenize(self._text).convert_list_object()
 
     def __repr__(self):
         return str(u'Sentence model')
